@@ -6,11 +6,11 @@ var BAR_WIDTH = 40;
 var BAR_MAX_HEIGHT = 150;
 var BAR_GAP = 50;
 
-var getRandom = function(min, max) {
+var getRandom = function (min, max) {
   return (Math.random() * (max - min) + min);
 };
 
-var getMaxResult = function(array) {
+var getMaxResult = function (array) {
   var maxResult = array[0];
   for (var i = 0; i < array.length; i++) {
     if (array[i] > maxResult) {
@@ -21,7 +21,7 @@ var getMaxResult = function(array) {
 };
 
 
-var renderStatistics = function (ctx, names, times) {
+window.renderStatistics = function (ctx, names, times) {
   // Рисуем тень белого облака
   ctx.fillStyle = 'rgba(0, 0, 0, .7)';
   ctx.fillRect(110, 20, CLOUD_WIDTH, CLOUD_HEIGHT);
